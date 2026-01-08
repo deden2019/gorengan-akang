@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gorengan Pak Deden</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff3e0;
+}
+
+header {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.menu {
+    width: 100%;
+    max-width: 360px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+
+.menu:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.menu h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #e65100;
+}
+
+.menu p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.menu-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 12px;
+}
+
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff9800;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+
+
+.price {
+    font-weight: bold;
+    color: #bf360c;
+}
+
+
+.order {
+    display: block;
+    margin-top: 10px;
+    background: #25d366;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.order:hover {
+    background: #1ebe5d;
+}
+
+
+.filter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0 25px;
+    flex-wrap: wrap;
+}
+
+.filter button {
+    background: #ffe0b2;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #e65100;
+}
+
+.filter button.active,
+.filter button:hover {
+    background: #ff9800;
+    color: white;
+}
+
+
+
+footer {
+    background: #f57c00;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+}
+
+.wa-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🥟 Gorengan Pak Deden</h1>
+    <p>Gorengan hangat • Gurih • Harga rakyat</p>
+    <p style="font-size:12px;opacity:0.9;">
+Buka Senin Rabu & Jum'at
+</p>
+
+</header>
+
+
+<div class="filter">
+    <button class="active" onclick="filterMenu('all')">Semua</button>
+    <button onclick="filterMenu('gorengan')">Gurih</button>
+    <button onclick="filterMenu('manis')">Manis</button>
+    <button onclick="filterMenu('pedas')">Pedas</button>
+</div>
+
+
+<div class="container">
+
+
+<div class="menu manis">
+    <img src="pisang.png" alt="Pisang Goreng" class="menu-img">
+    <span class="badge"></span>
+
+    <h3>Pisang Goreng</h3>
+    <p class="price">Rp2.000 / pcs</p>
+    <p>Pisang manis, digoreng dadakan</p>
+
+    <a class="order" href="https://wa.me/628115965955?text=Halo%20saya%20mau%20pesan%20pisang%20goreng">
+        Pesan via WhatsApp
+    </a>
+</div>
+
+
+    <div class="menu gorengan pedas">
+    <img src="pisang.png" alt="Pisang Goreng" class="menu-img">
+    <span class="badge"></span>
+        <h3>Tahu Isi</h3>
+        <p class="price">Rp2.500 / pcs</p>
+        <p>Isi sayur pedas gurih</p>
+        <a class="order" href="https://wa.me/628115965955?text=Halo%20saya%20mau%20pesan%20tahu%20isi">
+            Pesan via WhatsApp
+        </a>
+    </div>
+
+    <div class="menu gorengan">
+    <img src="pisang.png" alt="Pisang Goreng" class="menu-img">
+    <span class="badge"></span>
+        <h3>Bakwan</h3>
+        <p class="price">Rp2.000 / pcs</p>
+        <p>Renyes, penuh sayur</p>
+        <a class="order" href="https://wa.me/628115965955?text=Halo%20saya%20mau%20pesan%20bakwan">
+            Pesan via WhatsApp
+        </a>
+    </div>
+
+</div>
+
+<a class="wa-fixed" href="https://wa.me/628115965955">
+    💬 Order
+</a>
+
+<footer>
+    © 2026 Gorengan Pak Deden • Order via WhatsApp
+</footer>
+
+
+
+<script>
+function filterMenu(category) {
+    const menus = document.querySelectorAll('.menu');
+    const buttons = document.querySelectorAll('.filter button');
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    menus.forEach(menu => {
+        if (category === 'all' || menu.classList.contains(category)) {
+            menu.style.display = 'block';
+        } else {
+            menu.style.display = 'none';
+        }
+    });
+}
+
+</script>
+
+<script>
+document.querySelectorAll('.menu').forEach(menu => {
+    const badge = menu.querySelector('.badge');
+
+    if (menu.classList.contains('manis')) {
+        badge.innerText = '🍌 Manis';
+        badge.style.background = '#ff9800';
+    }
+
+    if (menu.classList.contains('pedas')) {
+        badge.innerText = '🌶️ Pedas';
+        badge.style.background = '#e53935';
+    }
+
+    if (menu.classList.contains('gorengan')) {
+        badge.innerText = '🔥 Gurih';
+        badge.style.background = '#f57c00';
+    }
+
+    if (!badge.innerText) {
+        badge.style.display = 'none';
+    }
+});
+</script>
+
+
+<script>
+const jamBuka = 15;   // 15:00
+const jamTutup = 22; // 22:00
+
+const hariTutup = [5, 0]; // Jumat & Minggu
+
+const sekarang = new Date();
+const jamSekarang = sekarang.getHours();
+const hariSekarang = sekarang.getDay();
+
+const isHariTutup = hariTutup.includes(hariSekarang);
+const isJamTutup = jamSekarang < jamBuka || jamSekarang >= jamTutup;
+
+document.querySelectorAll('.menu').forEach(menu => {
+    const badge = menu.querySelector('.badge');
+    const tombol = menu.querySelector('.order');
+    const namaMenu = menu.querySelector('h3').innerText;
+
+    if (isHariTutup || isJamTutup) {
+        // MODE PREORDER
+        badge.innerText = '🕒 Pre-Order';
+        badge.style.background = '#607d8b';
+
+        tombol.innerText = 'Pre-Order WhatsApp';
+        tombol.style.background = '#90a4ae';
+
+        const pesan = `Halo, saya mau PRE-ORDER ${namaMenu}. Ambil besok ya 🙏`;
+        tombol.href = `https://wa.me/628115965955?text=${encodeURIComponent(pesan)}`;
+    }
+});
+</script>
+
+
+
+</body>
+</html>
